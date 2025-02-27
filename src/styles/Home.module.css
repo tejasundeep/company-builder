@@ -1,0 +1,143 @@
+.flowContainer {
+  height: calc(100vh - 56px);
+  width: 100%;
+  background: #f8f9fa;
+}
+
+.navbar {
+  padding: 0.5rem 1rem;
+}
+
+.navbarButtons {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.navButton {
+  padding: 6px 12px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.flowControls {
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  margin: 0.5rem;
+}
+
+.flowControls button {
+  border-radius: 4px;
+  padding: 5px;
+  margin: 2px;
+}
+
+.miniMap {
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin: 0.5rem;
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+}
+
+.nodeTask {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 15px;
+  min-width: 150px;
+  max-width: 300px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: all 0.2s ease;
+  font-size: 14px;
+}
+
+.nodeMilestone {
+  background: #e6f3ff;
+  border: 1px solid #4a90e2;
+  border-radius: 12px;
+  padding: 15px;
+  min-width: 150px;
+  max-width: 300px;
+  box-shadow: 0 2px 5px rgba(74,144,226,0.2);
+  transition: all 0.2s ease;
+  font-size: 14px;
+}
+
+.nodeDecision {
+  background: #fff3e6;
+  border: 1px solid #f5a623;
+  border-radius: 12px;
+  padding: 15px;
+  min-width: 150px;
+  max-width: 300px;
+  box-shadow: 0 2px 5px rgba(245,166,35,0.2);
+  transition: all 0.2s ease;
+  font-size: 14px;
+}
+
+.nodeTask:hover,
+.nodeMilestone:hover,
+.nodeDecision:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.modal {
+  border-radius: 12px;
+}
+
+.modalHeader {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.modalBody {
+  padding-top: 0;
+}
+
+.modalFooter {
+  border-top: 0;
+}
+
+.formControl {
+  border-radius: 8px;
+}
+
+@keyframes flow {
+  from {
+    stroke-dashoffset: 100;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.edgePath {
+  stroke-dasharray: 5;
+  animation: flow 20s infinite linear;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+@media (max-width: 768px) {
+  .flowControls {
+    transform: scale(0.8);
+  }
+
+  .miniMap {
+    transform: scale(0.8);
+  }
+
+  .navbarButtons {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .navButton {
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+}
